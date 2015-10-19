@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  模仿新闻UI
+//
+//  Created by 林海 on 15/10/16.
+//  Copyright © 2015年 林海. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define QQColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define QQDefaultColor [UIColor colorWithRed:0/255.0 green:165/255.0 blue:224/255.0 alpha:1.0]
+
+#define MAIN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define VIEW_HEIHT  [UIScreen mainScreen].bounds.size.height - 64
+
+
+#define Screen_Height [UIScreen mainScreen].bounds.size.height
+#define screen_Widht [UIScreen mainScreen].bounds.size.width
+
+#endif /* PrefixHeader_pch */
