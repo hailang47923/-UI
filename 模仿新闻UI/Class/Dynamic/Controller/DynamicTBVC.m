@@ -10,8 +10,9 @@
 #import "DynamicOneRowCell.h"
 #import "TLUIHelper.h"
 #import "TLFounctionCell.h"
+#import "QQZoneTBVC.h"
 
-@interface DynamicTBVC ()
+@interface DynamicTBVC ()<DynamicOneCellDelegate>
 @property (nonatomic,strong) UISearchController *searchVC;
 @property (nonatomic,strong) NSMutableArray *datas;
 @end
@@ -68,6 +69,7 @@
     NSInteger row = indexPath.section;
     if (row == 0) {
         DynamicOneRowCell *cell = [[DynamicOneRowCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell.delegate = self;
         return cell;
     }
     TLSettingGrounp *group = [_datas objectAtIndex:indexPath.section - 1];
@@ -108,4 +110,12 @@
     }
 }
 
+#pragma mark - dynamicOneCellDelegate
+-(void)dynamicOneCellBtnClickWithTag:(NSInteger)tag
+{
+    if (tag == 1) {
+        QQZoneTBVC *zoneVC = [[QQZoneTBVC alloc] init];
+        [self.navigationController pushViewController:zoneVC animated:YES];
+    }
+}
 @end

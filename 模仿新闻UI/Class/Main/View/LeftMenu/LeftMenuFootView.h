@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LeftMenuFootViewDegelate <NSObject>
+
+-(void)LeftMenuFootViewSettingButtonIsClick;
+
+@end
+
 @interface LeftMenuFootView : UIView
+
+@property (nonatomic, weak) id <LeftMenuFootViewDegelate> degelate;
 
 @end

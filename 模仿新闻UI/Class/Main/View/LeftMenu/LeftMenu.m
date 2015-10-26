@@ -11,7 +11,7 @@
 #import "LeftMenuFootView.h"
 #import "LeftMenuHeaderView.h"
 
-@interface LeftMenu()<UITableViewDataSource,UITableViewDelegate>
+@interface LeftMenu()<UITableViewDataSource,UITableViewDelegate,LeftMenuFootViewDegelate>
 @property (nonatomic, weak) UITableView *listTableView;
 @property (nonatomic, weak) LeftMenuFootView *footView;
 @property (nonatomic, weak) LeftMenuHeaderView *headerView;
@@ -30,6 +30,7 @@
         
         //添加底部的View
         LeftMenuFootView *footerView = [[LeftMenuFootView alloc] init];
+        footerView.degelate = self;
         _footView = footerView;
         [self addSubview:footerView];
         
@@ -82,6 +83,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([self.degelate respondsToSelector:@selector(leftMenuDidSeletedAtRow:title:)]) {
         [self.degelate leftMenuDidSeletedAtRow:indexPath.row title:_lists[indexPath.row]];
+    }
+}
+
+#pragma mark - footvirwDegelate
+-(void)LeftMenuFootViewSettingButtonIsClick
+{
+    if ([self.degelate respondsToSelector:@selector(leftMenuSettingButtonIsClick)]) {
+        [self.degelate leftMenuSettingButtonIsClick];
     }
 }
 @end

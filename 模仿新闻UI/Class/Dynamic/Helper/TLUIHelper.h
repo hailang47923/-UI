@@ -11,7 +11,7 @@
 
 @interface TLUIHelper : NSObject
 
-+ (TLSettingGrounp *) getFriensListItemsGroup;
+//+ (TLSettingGrounp *) getFriensListItemsGroup;
 + (NSMutableArray *) getDynamicItems;
 + (NSMutableArray *) getSettingItems;
 

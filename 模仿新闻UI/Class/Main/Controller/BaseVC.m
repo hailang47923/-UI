@@ -15,11 +15,15 @@
 #import "LNewsVC.h"
 #import "IWTabBarViewController.h"
 #import "SettingTBVC.h"
+#import "IWNavigationController.h"
 
-@interface BaseVC ()<LeftMenuDegelate>
+@interface BaseVC ()<LeftMenuDegelate,UIGestureRecognizerDelegate>
 @property (nonatomic, strong) LeftMenu *leftMenu;
 @property (nonatomic, weak) LNewsVC *LNewsVC;
 @property (nonatomic, strong) UISearchController *searchVC;
+
+@property (nonatomic, assign) CGFloat speedf; //滑动速度
+@property (nonatomic, assign) CGFloat scalef; //滑动比例
 @end
 
 @implementation BaseVC
@@ -50,13 +54,10 @@
     //添加tableview
     [self addBaseTableView];
     
-    //注册通知
-    [self addNoto];
 }
 
 -(void)addBackGroundImage
 {
-   // [UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];
     for (UIView  *view in [UIApplication sharedApplication].keyWindow.subviews) {
         if ([view isKindOfClass:[UIImageView class]]) {
             [view  removeFromSuperview];
@@ -109,18 +110,6 @@
     [BaseTBV setTableHeaderView:_searchVC.searchBar];
 }
 
--(void)addNoto
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(leftMenuSettingBtnClick) name:@"settingBtnClick" object:nil];
-}
-
--(void)leftMenuSettingBtnClick
-{
-    [self coverClick:nil];
-    SettingTBVC *setTBVC = [[SettingTBVC alloc] init];
-    [self.navigationController pushViewController:setTBVC animated:YES];
-}
-
 -(void)setSearchPlaceholder:(NSString *)searchPlaceholder
 {
     _searchVC.searchBar.placeholder = searchPlaceholder;
@@ -128,7 +117,7 @@
 
 -(void)buildUI
 {
-    
+    _speedf = 0.5;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
     button.frame = CGRectMake(0,0, 40, 40);
@@ -142,8 +131,8 @@
 -(void)leftItemClick
 {
     self.navigationItem.leftBarButtonItem = nil;
-    CGAffineTransform sacleForm = CGAffineTransformMakeScale(0.9, 0.9);
-    CGAffineTransform tranSacleForm = CGAffineTransformTranslate(sacleForm, -80, 0);
+    CGAffineTransform sacleForm = CGAffineTransformMakeScale(0.9, 0.9);//缩放
+    CGAffineTransform tranSacleForm = CGAffineTransformTranslate(sacleForm, -80, 0); //缩放+移动
     self.leftMenu.transform = tranSacleForm;
     self.leftMenu.hidden = NO;
     self.leftMenu.alpha = 1.0;
@@ -188,22 +177,25 @@
 #pragma mark - leftMenuDegelate
 -(void)leftMenuDidSeletedAtRow:(NSInteger)row title:(NSString *)title
 {
-    for (UIView *subView in self.view.subviews) {
-        [subView removeFromSuperview];
-    }
     [self coverClick:nil];
     
         LNewsVC *news = [[LNewsVC alloc] init];
     [self.navigationController pushViewController:news animated:YES];
-    
-   
-    
+}
+
+-(void)leftMenuSettingButtonIsClick
+{
+    [self coverClick:nil];
+    SettingTBVC *setTBVC = [[SettingTBVC alloc] init];
+    [self.navigationController pushViewController:setTBVC animated:YES];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+#pragma mark - GestureRecognizerDegelaete
 
 
 

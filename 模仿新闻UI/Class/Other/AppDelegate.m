@@ -20,11 +20,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    IWTabBarViewController *tarbarVC = [[IWTabBarViewController alloc] init];
-//    self.window.rootViewController = tarbarVC;
-    
-    LoginVC *loginVC = [[LoginVC alloc] init];
-    self.window.rootViewController = loginVC;
+    IWTabBarViewController *tarbarVC = [[IWTabBarViewController alloc] init];
+    self.window.rootViewController = tarbarVC;
+//    
+//    LoginVC *loginVC = [[LoginVC alloc] init];
+//    self.window.rootViewController = loginVC;
+//    
     return YES;
 }
 

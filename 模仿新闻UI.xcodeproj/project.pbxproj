@@ -27,6 +27,8 @@
 		AD949B9A1BD48C4100E71A1B /* UIImage+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = AD949B951BD48C4100E71A1B /* UIImage+TL.m */; settings = {ASSET_TAGS = (); }; };
 		AD949B9B1BD48C4100E71A1B /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = AD949B971BD48C4100E71A1B /* UIView+TL.m */; settings = {ASSET_TAGS = (); }; };
 		AD949B9E1BD48CB500E71A1B /* TLFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD949B9D1BD48CB500E71A1B /* TLFriendCell.m */; settings = {ASSET_TAGS = (); }; };
+		AD9910F91BD5CFDB00D1DC26 /* QQZoneTBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9910F81BD5CFDB00D1DC26 /* QQZoneTBVC.m */; settings = {ASSET_TAGS = (); }; };
+		AD9910FC1BD5D38E00D1DC26 /* QQZoneTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9910FB1BD5D38E00D1DC26 /* QQZoneTopView.m */; settings = {ASSET_TAGS = (); }; };
 		ADA169671BD0C04400C78FAB /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1695B1BD0C04400C78FAB /* LoginVC.m */; settings = {ASSET_TAGS = (); }; };
 		ADA1696B1BD0C04400C78FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA169661BD0C04400C78FAB /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		ADA169701BD0C0DF00C78FAB /* LeftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1696F1BD0C0DF00C78FAB /* LeftMenu.m */; settings = {ASSET_TAGS = (); }; };
@@ -42,6 +44,8 @@
 		ADA169A21BD0DC2300C78FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA169A11BD0DC2300C78FAB /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		ADA169A51BD0EF0900C78FAB /* LeftMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA169A41BD0EF0900C78FAB /* LeftMenuHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		ADA169A81BD0EF2500C78FAB /* LeftMenuFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA169A71BD0EF2500C78FAB /* LeftMenuFootView.m */; settings = {ASSET_TAGS = (); }; };
+		ADDA298E1BD7BD0900011C9B /* UIImage+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA298D1BD7BD0900011C9B /* UIImage+UIColor.m */; settings = {ASSET_TAGS = (); }; };
+		ADDA29911BD7D3E200011C9B /* QQZoneHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA29901BD7D3E200011C9B /* QQZoneHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		AD949B971BD48C4100E71A1B /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		AD949B9C1BD48CB500E71A1B /* TLFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLFriendCell.h; sourceTree = "<group>"; };
 		AD949B9D1BD48CB500E71A1B /* TLFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLFriendCell.m; sourceTree = "<group>"; };
+		AD9910F71BD5CFDB00D1DC26 /* QQZoneTBVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZoneTBVC.h; sourceTree = "<group>"; };
+		AD9910F81BD5CFDB00D1DC26 /* QQZoneTBVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZoneTBVC.m; sourceTree = "<group>"; };
+		AD9910FA1BD5D38E00D1DC26 /* QQZoneTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZoneTopView.h; sourceTree = "<group>"; };
+		AD9910FB1BD5D38E00D1DC26 /* QQZoneTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZoneTopView.m; sourceTree = "<group>"; };
 		ADA1695A1BD0C04400C78FAB /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		ADA1695B1BD0C04400C78FAB /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		ADA169651BD0C04400C78FAB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +142,10 @@
 		ADA169A41BD0EF0900C78FAB /* LeftMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuHeaderView.m; sourceTree = "<group>"; };
 		ADA169A61BD0EF2500C78FAB /* LeftMenuFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuFootView.h; sourceTree = "<group>"; };
 		ADA169A71BD0EF2500C78FAB /* LeftMenuFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuFootView.m; sourceTree = "<group>"; };
+		ADDA298C1BD7BD0900011C9B /* UIImage+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIColor.h"; sourceTree = "<group>"; };
+		ADDA298D1BD7BD0900011C9B /* UIImage+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIColor.m"; sourceTree = "<group>"; };
+		ADDA298F1BD7D3E200011C9B /* QQZoneHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZoneHeaderView.h; sourceTree = "<group>"; };
+		ADDA29901BD7D3E200011C9B /* QQZoneHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZoneHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +303,8 @@
 				AD949B941BD48C4100E71A1B /* UIImage+TL.h */,
 				AD949B951BD48C4100E71A1B /* UIImage+TL.m */,
 				AD949B961BD48C4100E71A1B /* UIView+TL.h */,
+				ADDA298C1BD7BD0900011C9B /* UIImage+UIColor.h */,
+				ADDA298D1BD7BD0900011C9B /* UIImage+UIColor.m */,
 				AD949B971BD48C4100E71A1B /* UIView+TL.m */,
 			);
 			path = Category;
@@ -456,6 +470,8 @@
 			children = (
 				ADA1698E1BD0C2C500C78FAB /* DynamicTBVC.h */,
 				ADA1698F1BD0C2C500C78FAB /* DynamicTBVC.m */,
+				AD9910F71BD5CFDB00D1DC26 /* QQZoneTBVC.h */,
+				AD9910F81BD5CFDB00D1DC26 /* QQZoneTBVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -467,6 +483,10 @@
 				AD949B891BD48BA600E71A1B /* TLFounctionCell.m */,
 				AD949B6C1BD4715A00E71A1B /* DynamicOneRowCell.h */,
 				AD949B6D1BD4715A00E71A1B /* DynamicOneRowCell.m */,
+				AD9910FA1BD5D38E00D1DC26 /* QQZoneTopView.h */,
+				AD9910FB1BD5D38E00D1DC26 /* QQZoneTopView.m */,
+				ADDA298F1BD7D3E200011C9B /* QQZoneHeaderView.h */,
+				ADDA29901BD7D3E200011C9B /* QQZoneHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -620,9 +640,12 @@
 				AD07A9571BD3B5DD00E58D1B /* MessageTitleView.m in Sources */,
 				ADA169701BD0C0DF00C78FAB /* LeftMenu.m in Sources */,
 				ADA169901BD0C2C500C78FAB /* DynamicTBVC.m in Sources */,
+				ADDA29911BD7D3E200011C9B /* QQZoneHeaderView.m in Sources */,
 				ADA169A51BD0EF0900C78FAB /* LeftMenuHeaderView.m in Sources */,
 				AD949B771BD4887400E71A1B /* TLSetting.m in Sources */,
 				ADA169961BD0C2EC00C78FAB /* FriendTBVC.m in Sources */,
+				AD9910FC1BD5D38E00D1DC26 /* QQZoneTopView.m in Sources */,
+				ADDA298E1BD7BD0900011C9B /* UIImage+UIColor.m in Sources */,
 				AD949B981BD48C4100E71A1B /* NSString+TL.m in Sources */,
 				AD9045011BD5069500D6F34E /* SettingTBVC.m in Sources */,
 				AD949B9B1BD48C4100E71A1B /* UIView+TL.m in Sources */,
@@ -630,6 +653,7 @@
 				ADA169841BD0C1FF00C78FAB /* IWTabBarViewController.m in Sources */,
 				ADA169A81BD0EF2500C78FAB /* LeftMenuFootView.m in Sources */,
 				ADA1697D1BD0C0FF00C78FAB /* LNewsVC.m in Sources */,
+				AD9910F91BD5CFDB00D1DC26 /* QQZoneTBVC.m in Sources */,
 				AD9044FA1BD4FF5500D6F34E /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

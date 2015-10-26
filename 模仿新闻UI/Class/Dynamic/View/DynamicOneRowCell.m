@@ -31,10 +31,13 @@
         _lableArray = [NSMutableArray array];
         
         UIButton *frinedBtn = [self buttonWithImage:@"found_icons_qzone"];
+        frinedBtn.tag = 1;
         _friendBtn = frinedBtn;
         UIButton *nearBtn = [self buttonWithImage:@"found_icons_location" ];
+        nearBtn.tag = 2;
         _nearBtn = nearBtn;
         UIButton *tribeBtn = [self buttonWithImage:@"found_icons_group_buluo"];
+        tribeBtn.tag = 3;
         _tribeBtn = tribeBtn;
 
         UILabel *label1 = [self labelWtihTiltle:@"好友动态"];
@@ -54,7 +57,6 @@
     }
     return self;
 }
-
 
 -(void)layoutSubviews
 {
@@ -92,6 +94,7 @@
     [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [self addSubview:btn];
     [_btnArray addObject:btn];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
 
@@ -107,5 +110,10 @@
     return label;
 }
 
-
+-(void)btnClick:(UIButton *)btn
+{
+    if ([self.delegate respondsToSelector:@selector(dynamicOneCellBtnClickWithTag:)]) {
+        [self.delegate dynamicOneCellBtnClickWithTag:btn.tag];
+    }
+}
 @end

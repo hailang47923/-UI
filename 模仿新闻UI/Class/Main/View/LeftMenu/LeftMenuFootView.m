@@ -64,8 +64,9 @@
 
 -(void)settingBtnClick
 {
-    //发送通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"settingBtnClick" object:nil];
+    if ([self.degelate respondsToSelector:@selector(LeftMenuFootViewSettingButtonIsClick)]) {
+        [self .degelate LeftMenuFootViewSettingButtonIsClick];
+    }
 }
 
 -(void)dayBtnClick:(UIButton *)btn
